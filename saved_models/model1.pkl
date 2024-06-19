@@ -1,0 +1,8 @@
+# Make predictions
+
+baseline_predictions = model.predict(test_data)
+optimized_predictions = optimized_model.predict(test_data)
+
+# Convert predictions to class labels
+baseline_predicted_classes = tf.argmax(baseline_predictions, axis=1)
+optimized_predicted_classes = tf.argmax(optimized_predictions, axis=1)

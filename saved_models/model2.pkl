@@ -1,0 +1,9 @@
+# Define the optimized model
+
+optimized_model = Sequential([
+    Dense(64, activation='relu', input_shape=(train_data.shape[1],)),
+    tf.keras.layers.BatchNormalization(),
+    Dense(64, activation='relu'),
+    tf.keras.layers.Dropout(0.5),
+    Dense(len(y.unique()), activation='softmax')
+])
